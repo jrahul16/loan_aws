@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Loan Approval</title>
+</head>
+<body>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loan Approval 
+    <form action="/predict" method="POST">
+        <label>Gender</label>
+        <select name="gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Married</label>
+        <select name="married">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Dependents</label>
+        <select name="dependents">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+        </select><br><br>
+
+        <label>Education</label>
+        <select name="education">
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+        </select><br><br>
+
+        <label>Self Employed</label>
+        <select name="self_employed">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        <label>Loan Amount Term (month)</label><input type="text" name="loan_amount_term"><br><br>
+        <label>Credit History</label>
+        <select name="credit_history">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Property Area</label>
+        <select name="property_area">
+            <option value="0">Rural</option>
+            <option value="1">Semi Urban</option>
+            <option value="2">Urban</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Loan Amount&nbsp;&nbsp;  </label><input type="text" name="loan_amount"><br><br>
+        <label>Applicant Income&nbsp;&nbsp;</label><input type="text" name="applicant_income">&nbsp;&nbsp;&nbsp;&nbsp;
+        <label> Co-Applicant Income&nbsp;&nbsp;</label><input type="text" name="co_applicant_income"><br><br>
+        <input type="submit">
+        <br><br>
+        <label>Result &nbsp;&nbsp;&nbsp;&nbsp;  =&nbsp;&nbsp;&nbsp;&nbsp; </label>{{pred}}
+    </form>
+</body>
+</html>
